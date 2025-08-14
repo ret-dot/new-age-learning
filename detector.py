@@ -1,30 +1,73 @@
-import numpy as np
+# improved_detector.py
+import torch
 from ultralytics import YOLO
 
-class Detector:
-    def __init__(self, device='cpu', model_name='yolov8n.pt', conf_thresh=0.35):
-        print('Loading YOLO model (this may be slow on CPU)...')
-        self.model = YOLO(model_name)
+class ImprovedDetector:
+    def __init__(self, model_path="yolov8x.pt", device="cpu", conf_thresh=0.4):
+        """
+        Use a heavy YOLO model for higher accuracy.
+        You can swap 'yolov8x.pt' with 'yolov9c.pt' or any trained model.
+        """
+        self.model = YOLO(model_path)
+        self.model.to(device)
         self.device = device
-        self.model.fuse()  # attempt some small acceleration
         self.conf_thresh = conf_thresh
 
+    def scene_classify(self, frame):
+        """
+        Placeholder scene classifier.
+        Replace with a real classifier like Places365 if needed.
+        """
+        return "unknown"
+
+    def label_cleanup(self, detections):
+        """
+        Remove very low confidence or duplicate labels.
+        """
+        seen_labels = set()
+        cleaned = []
+        for det in detections:
+            label = det["class_name"]
+            if det["conf"] >= self.conf_thresh and label not in seen_labels:
+                seen_labels.add(label)
+                cleaned.append(det)
+        return cleaned
+
     def predict(self, frame):
-        # frame: BGR numpy
-        # return list of dict: {class, conf, bbox=[x,y,w,h]}
-        results = self.model.predict(source=frame, stream=False, device=self.device, conf=self.conf_thresh, imgsz=frame.shape[:2])
-        # ultralytics returns list of Results; on CPU we get a single result
-        out = []
-        if not results:
-            return out
-        res = results[0]
-        boxes = res.boxes
-        for box in boxes:
-            xyxy = box.xyxy[0].cpu().numpy() if hasattr(box.xyxy[0], 'cpu') else box.xyxy[0].numpy()
-            conf = float(box.conf[0]) if hasattr(box.conf[0], 'item') else float(box.conf[0])
-            cls = int(box.cls[0]) if hasattr(box.cls[0], 'item') else int(box.cls[0])
-            x1,y1,x2,y2 = xyxy
-            w = x2 - x1
-            h = y2 - y1
-            out.append({'class': cls, 'conf': conf, 'bbox': [float(x1), float(y1), float(w), float(h)]})
-        return out
+        """
+        Run YOLO, clean labels, return final detections.
+        """
+        results = self.model.predict(
+            frame, 
+            conf=self.conf_thresh, 
+            device=self.device, 
+            verbose=False
+        )
+
+        final_dets = []
+        for r in results:
+            for box in r.boxes:
+                cls_id = int(box.cls)
+                class_name = self.model.names[cls_id]
+                det = {
+                    "class": cls_id,
+                    "class_name": class_name,
+                    "conf": float(box.conf),
+                    "bbox": box.xywh[0].tolist()
+                }
+                final_dets.append(det)
+
+        # Remove duplicates / junk
+        final_dets = self.label_cleanup(final_dets)
+        return final_dets
+
+
+if __name__ == "__main__":
+    import cv2
+    det = ImprovedDetector(model_path="yolov8x.pt", device="cuda" if torch.cuda.is_available() else "cpu")
+    cap = cv2.VideoCapture("sample.mp4")
+    ret, frame = cap.read()
+    if ret:
+        detections = det.predict(frame)
+        print(detections)
+    cap.release()

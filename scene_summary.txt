@@ -1,0 +1,28 @@
+Between 00:06 and 00:25, the scene contains person. Most objects are stationary.
+Between 00:30 and 06:56, the scene contains tie, elephant, cell phone, wine glass, cup, car, person. Most objects are approaching and stationary and receding.
+Between 07:10 and 08:00, the scene contains bicycle, traffic light, bus, car, person. Most objects are stationary.
+Between 08:06 and 10:44, the scene contains handbag, bicycle, clock, couch, laptop, cat, refrigerator, chair, bottle, backpack, cup, tv, keyboard, person. Most objects are stationary and receding and right.
+Between 10:53 and 11:46, the scene contains laptop, chair, bottle, mouse, tv, keyboard, person. Most objects are approaching and stationary and receding and right.
+Between 11:51 and 11:59, the scene contains chair, person. Most objects are stationary.
+Between 12:03 and 12:38, the scene contains laptop, handbag, car, train, tie, chair, boat, truck, dog, bottle, bed, bus, keyboard, person. Most objects are approaching and stationary and receding and right.
+Between 12:43 and 12:55, the scene contains tie, car, person. Most objects are stationary.
+Between 13:00 and 16:16, the scene contains laptop, couch, remote, cat, tie, refrigerator, chair, bottle, bed, bowl, cup, tv, keyboard, person. Most objects are approaching and stationary and receding and right.
+Between 16:21 and 16:55, the scene contains tie, chair, bottle, cup, tv, person. Most objects are stationary and right.
+Between 17:03 and 18:56, the scene contains laptop, couch, potted plant, cat, tie, refrigerator, chair, keyboard, microwave, cell phone, wine glass, bottle, cup, tv, car, person. Most objects are approaching and stationary.
+Between 19:03 and 19:32, the scene contains tv, chair, person. Most objects are approaching and stationary and receding and right.
+Between 19:38 and 21:33, the scene contains laptop, couch, tie, chair, bottle, bed, cup, tv, keyboard, person. Most objects are approaching and stationary and receding.
+Between 21:39 and 21:43, the scene contains bird, person. Most objects are stationary.
+Between 21:50 and 55:33, the scene contains handbag, motorcycle, train, vase, refrigerator, truck, wine glass, backpack, cup, person, laptop, clock, cake, suitcase, tie, chair, teddy bear, cell phone, bed, bowl, mouse, cat, oven, surfboard, pizza, traffic light, potted plant, dining table, bottle, bus, tv, car, sink, couch, bench, book, frisbee, skis, microwave, dog, bicycle, keyboard. Most objects are down and receding and stationary and approaching and right.
+Between 55:38 and 64:00, the scene contains handbag, vase, wine glass, cup, person, laptop, tie, chair, cell phone, bowl, horse, oven, dining table, elephant, bottle, tv, couch, dog, car. Most objects are receding and up and stationary and approaching and right.
+Between 64:04 and 64:13, the scene contains person. Most objects are stationary.
+Between 64:19 and 64:24, the scene contains backpack, person. Most objects are stationary.
+Between 64:33 and 75:19, the scene contains handbag, vase, refrigerator, wine glass, cup, person, laptop, clock, tie, chair, cell phone, bed, toilet, oven, dining table, bottle, tv, couch, book, microwave, dog, keyboard. Most objects are receding and stationary and approaching and left and right.
+Between 75:26 and 100:33, the scene contains vase, refrigerator, sheep, wine glass, cup, person, laptop, suitcase, tie, chair, cell phone, bed, bowl, toilet, cat, oven, potted plant, remote, dining table, bottle, tv, car, sink, couch, bench, microwave, keyboard. Most objects are approaching and stationary and receding and right.
+Between 100:38 and 103:45, the scene contains motorcycle, couch, umbrella, dining table, wine glass, cup, tv, car, person. Most objects are approaching and stationary and receding.
+Between 103:50 and 105:23, the scene contains dining table, bottle, wine glass, tv, person. Most objects are approaching and stationary.
+Between 105:36 and 107:30, the scene contains motorcycle, umbrella, bench, sports ball, tie, baseball bat, bus, boat, car, person. Most objects are approaching and stationary and receding and right.
+Between 107:35 and 116:58, the scene contains handbag, refrigerator, wine glass, cup, person, laptop, suitcase, tie, chair, cell phone, bowl, oven, potted plant, remote, dining table, bottle, tv, couch, book. Most objects are approaching and stationary.
+Between 117:04 and 117:59, the scene contains cell phone, chair, person, potted plant. Most objects are stationary.
+Between 118:08 and 118:12, the scene contains bed, person. Most objects are stationary and receding and right.
+Between 118:18 and 121:40, the scene contains couch, tie, refrigerator, chair, tv, dog, cell phone, bed, bottle, cup, cat, person. Most objects are receding and up and stationary and approaching and right.
+Between 121:45 and 144:00, the scene contains handbag, refrigerator, truck, backpack, cup, person, laptop, umbrella, suitcase, tie, chair, cell phone, bed, mouse, oven, banana, potted plant, remote, dining table, elephant, bottle, bus, tv, couch, microwave, dog, bicycle, car. Most objects are receding and stationary and approaching and left and right.

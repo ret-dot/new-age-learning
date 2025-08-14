@@ -5,7 +5,7 @@ import argparse
 from pathlib import Path
 from downloader import download_youtube
 from sampler import AdaptiveSampler
-from detector import Detector
+from detector import ImprovedDetector
 from tracker import SortTracker
 from dedupe import collapse_events
 from motion import infer_directions
